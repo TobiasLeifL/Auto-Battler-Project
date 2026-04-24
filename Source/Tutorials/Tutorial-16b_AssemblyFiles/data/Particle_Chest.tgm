@@ -1,0 +1,9 @@
+{
+	"Fbx": "Particle_Chest.fbx",
+	"Textures": {
+		"Color": "AlternativeTextures/ParticleChest/Particle_Chest_c.dds",
+		"Material": "./Particle_Chest_M.dds",
+		"Normal": "AlternativeTextures/ParticleChest/NormalInverted.dds",
+		"Fx": "AlternativeTextures/ParticleChest/FxGreen.dds"
+	}
+}
