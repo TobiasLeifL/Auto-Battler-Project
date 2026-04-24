@@ -35,7 +35,7 @@ void Go()
 
 	Tga::EngineConfiguration winconf;
 	
-	winconf.myApplicationName = L"TGE - Amazing Game";
+	winconf.myApplicationName = L"TGE - Auto battler";
 	winconf.myWinProcCallback = [](HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam) {return WinProc(hWnd, message, wParam, lParam); };
 #ifdef _DEBUG
 	winconf.myActivateDebugSystems = Tga::DebugFeature::Fps | Tga::DebugFeature::Mem | Tga::DebugFeature::Filewatcher | Tga::DebugFeature::Cpu | Tga::DebugFeature::Drawcalls | Tga::DebugFeature::OptimizeWarnings;
@@ -43,7 +43,7 @@ void Go()
 	winconf.myActivateDebugSystems = Tga::DebugFeature::Filewatcher;
 #endif
 
-	if (!Tga::Engine::Start(winconf))
+	if (Tga::Engine::Start(winconf) == false)
 	{
 		ERROR_PRINT("Fatal error! Engine could not start!");
 		system("pause");
@@ -56,7 +56,8 @@ void Go()
 
 		Tga::Engine& engine = *Tga::Engine::GetInstance();
 
-		while (engine.BeginFrame()) {
+		while (engine.BeginFrame()) 
+		{
 			gameWorld.Update(engine.GetDeltaTime());
 			gameWorld.Render();
 
