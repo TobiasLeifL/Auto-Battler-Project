@@ -6,5 +6,5 @@ It uses the TGE (The Game Engine) which was the school engine we used for multip
 This is a learning project. This was made for learning how to create a component system.
 
 ##ECS system
-  -O(1) average lookup
-  -Type safe component access with templates
+-O(1) average lookup
+-Type safe component access with templates
